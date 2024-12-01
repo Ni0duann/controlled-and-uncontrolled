@@ -14,7 +14,7 @@ function Calendar(props:CalendarProps) {
 
     function changeValue(date:Date) {
         setValue(date);
-        // onChange?.(date)
+        onChange?.(date)
     }
 
     return (

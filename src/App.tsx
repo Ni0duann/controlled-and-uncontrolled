@@ -1,10 +1,13 @@
+import { useState } from 'react';
 import './App.css'
-import Calendar from './Calendar1'
+import Calendar from './Calendar2'
 
 function App() {
-
+  const [value,setValue] = useState(new Date('2024-12-1'))
   return (
-    <Calendar defaultValue={new Date('2024-12-6')} onChange={(date)=> {console.log(date.toLocaleDateString());
+    <Calendar value={value} onChange={(date)=> {
+      console.log(date.toLocaleDateString());
+      setValue(date)
     }}/>
   )
 }
